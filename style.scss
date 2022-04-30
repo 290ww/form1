@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+$break_1 : 1260px;
+$break_2 : 960px;
+$break_3 : 700px;
+$break_4 : 600px;
+$break_5 : 480px;
+$break_6 : 330px;
+
+:root{
+    --light-blue:#55D8E4;
+    --purple:#9F01EA;
+    --white:255,255,255;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    
+}
+
+
+.fmain{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom right, var(--light-blue), var(--purple));
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+
+    &__sec{
+        background-color: rgb(var(--white));
+        min-width: 30rem;
+        width: 60%;
+        height: max-content;
+        border-radius: 3rem;
+        transition: all .3s;
+        padding: 2rem;
+        box-shadow: 2rem 2rem 4rem rgba(0,0,0, .3);
+
+        &__txt{
+            text-align: center;
+            font-size: 4rem;
+            letter-spacing: 2px;
+            margin: 4rem 0;
+            background: linear-gradient(to left, var(--light-blue), var(--purple));
+            color: transparent;
+            background-clip: text;
+            -webkit-background-clip:text;
+            text-shadow: .5rem .5rem 1rem rgba(0,0,0, .1) ;
+            transition: all .3s;
+        }
+
+        form{
+            padding: 2rem 5rem;
+            width: 100%;
+            height: 70%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 5rem; 
+            sup{
+                color: rgba(255, 0, 0, 0.4);
+            }
+        }
+
+        &__fgroup{
+            width: 100%;
+            height: 5rem;
+            position: relative;
+
+            &__5{
+                grid-column: 1/3;
+            }
+
+            &__6{
+                grid-column: 1/3;
+            }
+
+            &__inp{
+                width: 100%;
+                height: 80%;
+                font-size: 2rem;
+                padding: 1rem;
+                border: none;
+                border-bottom: .2rem solid rgba(#000000, .1);
+                outline: none;
+                font-weight: 500;
+                font-family: 'Roboto', sans-serif;
+                transition: all .3;
+
+                &:focus + label{
+                    transform: translate(0px,-1.8rem);
+                    font-size: 1.6rem;
+                    color: var(--purple);
+                    text-shadow: .5rem .5rem 1rem rgba(0,0,0, .2) ;
+                }
+
+                &:focus{
+                    border-bottom: .2rem solid var(--purple);
+                }
+
+                &__5{
+
+                    + label{
+                        left: -.5rem;
+                    }
+                }
+
+                &__6{
+                    
+                }
+            }
+
+            &__lbl{
+                position: absolute;
+                left: -1.5rem;
+                top: 0;
+                font-size: 2rem;
+                transform: translate(5%,20%);
+                color: rgba(#000000, .6);
+                transition: all .3s;
+                
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+
+            &__btn{
+                width: 20rem;
+                height: 4.5rem;
+                font-size: 2rem;
+                background: linear-gradient(to right, var(--light-blue), var(--purple));
+                border: none;
+                font-weight: 500;
+                color: white;
+                text-transform: uppercase;
+            }
+
+        }
+
+        
+    }
+}
+
+
+.lblFoc{
+    transform: translate(0px,-1.8rem);
+    font-size: 1.6rem;
+    color: var(--purple);
+    text-shadow: .5rem .5rem 1rem rgba(0,0,0, .2) ;
+}
+
+.inpFoc{
+    border-bottom: .2rem solid var(--purple);
+}
+
+
+@media only screen and(max-width: $break_1){
+    .fmain{
+
+
+        &__sec{
+            width: 70%;
+
+            &__txt{
+                font-size: 3.5rem;
+            }
+            
+        }
+    }
+}
+
+@media only screen and(max-width: $break_2){
+    .fmain{
+
+
+        &__sec{
+            width: 80%;
+            &__txt{
+                font-size: 3rem;
+            }
+            &__fgroup{
+
+                
+                &__lbl{
+                    font-size: 1.9rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and(max-width: $break_3){
+    .fmain{ 
+        position: absolute;
+
+        &__sec{
+            width: 80%;
+            &__txt{
+                font-size: 2.4rem;
+            }
+
+            &__fgroup{
+
+                &__inp{
+                    font-size: 1.8;
+                }
+
+                &__lbl{
+                    font-size: 1.7rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and(max-width: $break_4){
+    .fmain{
+        
+
+        &__sec{
+            height: max-content;
+            width: 80%;
+            &__txt{
+                font-size: 2.3rem;
+            }
+
+
+            form{
+                padding: 2rem ;
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            &__fgroup{
+
+                &__5{
+                    grid-column: auto;
+                }
+    
+                &__6{
+                    grid-column: auto;
+                }
+
+
+                &__inp{
+
+                }
+
+                &__lbl{
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and(max-width: $break_5){
+    .fmain{
+
+        &__sec{
+            background-color: rgba(var(--white));
+            width: 100%;
+            border-radius: 0;
+            height: 100vh;
+            &__txt{
+                
+                font-size: 2.3rem;
+            }
+
+
+            form{
+                padding: 2rem 2rem 3rem 2rem;
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            &__fgroup{
+
+                &__5{
+                    grid-column: auto;
+                }
+    
+                &__6{
+                    grid-column: auto;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and(max-width: $break_6){
+    .fmain{
+       
+
+        &__sec{
+            height: max-content;
+            width: 100%;
+            &__txt{
+                font-size: 1.6rem;
+            }
+
+
+            form{
+                padding: 2rem;
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            &__fgroup{
+
+                &__5{
+                    grid-column: auto;
+                }
+    
+                &__6{
+                    grid-column: auto;
+                }
+
+            }
+        }
+    }
+}

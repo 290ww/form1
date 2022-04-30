@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+:root {
+  --light-blue:#55D8E4;
+  --purple:#9F01EA;
+  --white:255,255,255;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.fmain {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom right, var(--light-blue), var(--purple));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fmain__sec {
+  background-color: rgb(var(--white));
+  min-width: 30rem;
+  width: 60%;
+  height: max-content;
+  border-radius: 3rem;
+  transition: all 0.3s;
+  padding: 2rem;
+  box-shadow: 2rem 2rem 4rem rgba(0, 0, 0, 0.3);
+}
+.fmain__sec__txt {
+  text-align: center;
+  font-size: 4rem;
+  letter-spacing: 2px;
+  margin: 4rem 0;
+  background: linear-gradient(to left, var(--light-blue), var(--purple));
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+}
+.fmain__sec form {
+  padding: 2rem 5rem;
+  width: 100%;
+  height: 70%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 5rem;
+}
+.fmain__sec form sup {
+  color: rgba(255, 0, 0, 0.4);
+}
+.fmain__sec__fgroup {
+  width: 100%;
+  height: 5rem;
+  position: relative;
+}
+.fmain__sec__fgroup__5 {
+  grid-column: 1/3;
+}
+.fmain__sec__fgroup__6 {
+  grid-column: 1/3;
+}
+.fmain__sec__fgroup__inp {
+  width: 100%;
+  height: 80%;
+  font-size: 2rem;
+  padding: 1rem;
+  border: none;
+  border-bottom: 0.2rem solid rgba(0, 0, 0, 0.1);
+  outline: none;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  transition: all 0.3;
+}
+.fmain__sec__fgroup__inp:focus + label {
+  transform: translate(0px, -1.8rem);
+  font-size: 1.6rem;
+  color: var(--purple);
+  text-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+.fmain__sec__fgroup__inp:focus {
+  border-bottom: 0.2rem solid var(--purple);
+}
+.fmain__sec__fgroup__inp__5 + label {
+  left: -0.5rem;
+}
+.fmain__sec__fgroup__lbl {
+  position: absolute;
+  left: -1.5rem;
+  top: 0;
+  font-size: 2rem;
+  transform: translate(5%, 20%);
+  color: rgba(0, 0, 0, 0.6);
+  transition: all 0.3s;
+}
+.fmain__sec__fgroup__lbl:hover {
+  cursor: pointer;
+}
+.fmain__sec__fgroup__btn {
+  width: 20rem;
+  height: 4.5rem;
+  font-size: 2rem;
+  background: linear-gradient(to right, var(--light-blue), var(--purple));
+  border: none;
+  font-weight: 500;
+  color: white;
+  text-transform: uppercase;
+}
+
+.lblFoc {
+  transform: translate(0px, -1.8rem);
+  font-size: 1.6rem;
+  color: var(--purple);
+  text-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.inpFoc {
+  border-bottom: 0.2rem solid var(--purple);
+}
+
+@media only screen and (max-width: 1260px) {
+  .fmain__sec {
+    width: 70%;
+  }
+  .fmain__sec__txt {
+    font-size: 3.5rem;
+  }
+}
+@media only screen and (max-width: 960px) {
+  .fmain__sec {
+    width: 80%;
+  }
+  .fmain__sec__txt {
+    font-size: 3rem;
+  }
+  .fmain__sec__fgroup__lbl {
+    font-size: 1.9rem;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .fmain {
+    position: absolute;
+  }
+  .fmain__sec {
+    width: 80%;
+  }
+  .fmain__sec__txt {
+    font-size: 2.4rem;
+  }
+  .fmain__sec__fgroup__inp {
+    font-size: 1.8;
+  }
+  .fmain__sec__fgroup__lbl {
+    font-size: 1.7rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .fmain__sec {
+    height: max-content;
+    width: 80%;
+  }
+  .fmain__sec__txt {
+    font-size: 2.3rem;
+  }
+  .fmain__sec form {
+    padding: 2rem;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .fmain__sec__fgroup__5 {
+    grid-column: auto;
+  }
+  .fmain__sec__fgroup__6 {
+    grid-column: auto;
+  }
+  .fmain__sec__fgroup__lbl {
+    font-size: 1.6rem;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .fmain__sec {
+    background-color: rgba(var(--white));
+    width: 100%;
+    border-radius: 0;
+    height: 100vh;
+  }
+  .fmain__sec__txt {
+    font-size: 2.3rem;
+  }
+  .fmain__sec form {
+    padding: 2rem 2rem 3rem 2rem;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .fmain__sec__fgroup__5 {
+    grid-column: auto;
+  }
+  .fmain__sec__fgroup__6 {
+    grid-column: auto;
+  }
+}
+@media only screen and (max-width: 330px) {
+  .fmain__sec {
+    height: max-content;
+    width: 100%;
+  }
+  .fmain__sec__txt {
+    font-size: 1.6rem;
+  }
+  .fmain__sec form {
+    padding: 2rem;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .fmain__sec__fgroup__5 {
+    grid-column: auto;
+  }
+  .fmain__sec__fgroup__6 {
+    grid-column: auto;
+  }
+}
